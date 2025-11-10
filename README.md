@@ -15,12 +15,59 @@
 
 ## 🚀 快速開始
 
-### 安裝
+### 方法 1：直接開啟（最簡單）
 
 1. 下載或 clone 此專案
-2. 直接在瀏覽器中開啟 `index.html` 檔案
+2. 找到專案資料夾中的 `index.html` 檔案
+3. 雙擊開啟，或右鍵選擇用瀏覽器開啟
 
-就是這麼簡單！不需要安裝任何依賴或執行伺服器。
+就是這麼簡單！不需要安裝任何依賴。
+
+### 方法 2：使用本地伺服器（推薦）
+
+如果直接開啟有問題，或想要更好的開發體驗，可以啟動本地伺服器：
+
+**使用提供的啟動腳本：**
+
+- **Linux / macOS**:
+  ```bash
+  ./start-server.sh
+  ```
+
+- **Windows**:
+  ```bash
+  start-server.bat
+  ```
+
+然後在瀏覽器中開啟 `http://localhost:8000`
+
+**或手動啟動：**
+
+如果你已安裝 Python：
+```bash
+# Python 3
+python3 -m http.server 8000
+
+# 或 Python 2
+python -m SimpleHTTPServer 8000
+```
+
+如果你已安裝 Node.js：
+```bash
+# 安裝 http-server (只需執行一次)
+npm install -g http-server
+
+# 啟動伺服器
+http-server -p 8000
+```
+
+### 方法 3：部署到線上
+
+你可以將此專案部署到免費的託管平台：
+
+- **GitHub Pages**: 上傳到 GitHub 並啟用 GitHub Pages
+- **Netlify**: 拖放專案資料夾到 Netlify
+- **Vercel**: 連接 GitHub 倉庫並部署
 
 ### 使用方式
 
@@ -75,10 +122,12 @@
 
 ```
 Textbook/
-├── index.html      # 主 HTML 檔案
-├── styles.css      # 樣式表
-├── app.js          # 應用程式邏輯
-└── README.md       # 說明文件
+├── index.html         # 主 HTML 檔案
+├── styles.css         # 樣式表
+├── app.js             # 應用程式邏輯
+├── start-server.sh    # Linux/macOS 啟動腳本
+├── start-server.bat   # Windows 啟動腳本
+└── README.md          # 說明文件
 ```
 
 ## 🔒 資料儲存
