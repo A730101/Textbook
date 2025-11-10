@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提示詞筆記本管理器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 提示詞筆記本管理器</h1>
+            <p class="subtitle">管理你的 AI 提示詞、角色設定、圖像提示等</p>
+        </header>
+
+        <div class="main-content">
+            <!-- 側邊欄 - 分類管理 -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>分類</h2>
+                    <button class="btn-icon" id="addCategoryBtn" title="新增分類">+</button>
+                </div>
+                <div class="category-list" id="categoryList">
+                    <!-- 分類列表將動態生成 -->
+                </div>
+                <div class="stats">
+                    <p>總提示詞數: <span id="totalPrompts">0</span></p>
+                </div>
+            </aside>
+
+            <!-- 主區域 - 提示詞列表和編輯 -->
+            <main class="content">
+                <!-- 工具列 -->
+                <div class="toolbar">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="🔍 搜尋提示詞..." />
+                    </div>
+                    <button class="btn-primary" id="addPromptBtn">+ 新增提示詞</button>
+                </div>
+
+                <!-- 提示詞列表 -->
+                <div class="prompt-list" id="promptList">
+                    <!-- 提示詞卡片將動態生成 -->
+                </div>
+
+                <!-- 空狀態 -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📝</div>
+                    <h3>還沒有提示詞</h3>
+                    <p>點擊「新增提示詞」開始建立你的第一個提示詞</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 新增/編輯提示詞對話框 -->
+    <div class="modal" id="promptModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">新增提示詞</h2>
+                <button class="btn-close" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="promptForm">
+                    <div class="form-group">
+                        <label for="promptTitle">標題 *</label>
+                        <input type="text" id="promptTitle" required placeholder="例如：角色扮演 - 專業編輯">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="promptCategory">分類 *</label>
+                        <select id="promptCategory" required>
+                            <!-- 分類選項將動態生成 -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="promptContent">提示詞內容 *</label>
+                        <textarea id="promptContent" rows="8" required placeholder="輸入你的提示詞內容..."></textarea>
+                        <div class="char-count">
+                            字數: <span id="charCount">0</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="promptNotes">註解 / 備註</label>
+                        <textarea id="promptNotes" rows="3" placeholder="添加使用說明、注意事項等..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="promptTags">標籤</label>
+                        <input type="text" id="promptTags" placeholder="用逗號分隔，例如：角色扮演, 創意寫作">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancelBtn">取消</button>
+                        <button type="submit" class="btn-primary" id="saveBtn">儲存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增分類對話框 -->
+    <div class="modal" id="categoryModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>新增分類</h2>
+                <button class="btn-close" id="closeCategoryModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="categoryForm">
+                    <div class="form-group">
+                        <label for="categoryName">分類名稱 *</label>
+                        <input type="text" id="categoryName" required placeholder="例如：角色扮演">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoryIcon">圖示 (emoji)</label>
+                        <input type="text" id="categoryIcon" maxlength="2" placeholder="📝">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancelCategoryBtn">取消</button>
+                        <button type="submit" class="btn-primary">新增</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 確認刪除對話框 -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>確認刪除</h2>
+            </div>
+            <div class="modal-body">
+                <p id="confirmMessage">確定要刪除這個項目嗎？此操作無法復原。</p>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelConfirmBtn">取消</button>
+                    <button type="button" class="btn-danger" id="confirmDeleteBtn">刪除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast 通知 -->
+    <div class="toast" id="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
