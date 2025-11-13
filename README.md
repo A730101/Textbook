@@ -61,13 +61,41 @@ npm install -g http-server
 http-server -p 8000
 ```
 
-### 方法 3：部署到線上
+### 方法 3：部署到線上（GitHub Pages）
 
-你可以將此專案部署到免費的託管平台：
+本專案已配置 GitHub Actions 自動部署，按照以下步驟啟用 GitHub Pages：
 
-- **GitHub Pages**: 上傳到 GitHub 並啟用 GitHub Pages
-- **Netlify**: 拖放專案資料夾到 Netlify
-- **Vercel**: 連接 GitHub 倉庫並部署
+#### 步驟 1：推送到 GitHub
+
+如果還沒有推送，請將專案推送到 GitHub 倉庫。
+
+#### 步驟 2：啟用 GitHub Pages
+
+1. 前往你的 GitHub 倉庫頁面
+2. 點擊 **Settings**（設定）
+3. 在左側選單找到 **Pages**
+4. 在 **Source**（來源）區域，選擇：
+   - **Source**: `GitHub Actions`（不是 Deploy from a branch）
+5. 點擊 **Save**（儲存）
+
+#### 步驟 3：等待部署
+
+- 推送程式碼後，GitHub Actions 會自動運行
+- 前往 **Actions** 標籤查看部署進度
+- 部署成功後，你會在 Settings > Pages 看到網站網址
+- 通常網址格式為：`https://你的用戶名.github.io/Textbook/`
+
+#### 步驟 4：訪問你的網站
+
+部署完成後，點擊提供的網址即可訪問你的提示詞筆記本管理器！
+
+#### 其他部署選項
+
+你也可以將此專案部署到其他免費託管平台：
+
+- **Netlify**: 拖放專案資料夾到 Netlify（即時部署）
+- **Vercel**: 連接 GitHub 倉庫並部署（自動 CI/CD）
+- **Cloudflare Pages**: 連接 GitHub 並部署
 
 ### 使用方式
 
