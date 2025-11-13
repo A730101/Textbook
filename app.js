@@ -32,12 +32,85 @@ class PromptManager {
         const defaultCategories = [
             { id: 'cat-1', name: '角色扮演', icon: '🎭', count: 0 },
             { id: 'cat-2', name: '圖像生成', icon: '🎨', count: 0 },
-            { id: 'cat-3', name: '系統提示詞', icon: '⚙️', count: 0 },
-            { id: 'cat-4', name: '創意寫作', icon: '✍️', count: 0 },
-            { id: 'cat-5', name: '程式開發', icon: '💻', count: 0 }
+            { id: 'cat-3', name: '影片生成', icon: '🎬', count: 0 },
+            { id: 'cat-4', name: '系統提示詞', icon: '⚙️', count: 0 },
+            { id: 'cat-5', name: '創意寫作', icon: '✍️', count: 0 },
+            { id: 'cat-6', name: '程式開發', icon: '💻', count: 0 }
         ];
         this.categories = defaultCategories;
+        this.createDefaultPrompts();
         this.saveData();
+    }
+
+    // 創建預設提示詞範例
+    createDefaultPrompts() {
+        const defaultPrompts = [
+            {
+                id: 'prompt-sora2',
+                title: 'Sora 2 - 影片生成提示詞',
+                categoryId: 'cat-3',
+                content: `創建一個高品質的影片場景，需要包含以下元素：
+
+1. 場景描述：[詳細描述場景環境、時間、地點]
+2. 主體動作：[描述主要物體或人物的動作]
+3. 鏡頭運動：[例如：推軌、拉遠、環繞等]
+4. 光線氛圍：[描述光線效果和整體氛圍]
+5. 風格參考：[電影風格、藝術風格等]
+
+範例：
+一個寧靜的日出場景，鏡頭緩緩推進一座被晨霧籠罩的山頂。金色的陽光穿過雲層，照亮了山谷中的小村莊。鏡頭以電影般的流暢度環繞，展現出壯麗的全景。整體呈現溫暖、寧靜的氛圍，參考威斯·安德森的對稱構圖風格。`,
+                notes: '使用 Sora 2 時，越詳細的場景描述能獲得越好的效果。注意描述鏡頭運動和光線效果可以大幅提升影片質量。',
+                tags: ['Sora 2', '影片生成', 'AI 影片', '場景描述'],
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            },
+            {
+                id: 'prompt-veo3',
+                title: 'Gemini Veo 3.1 - 影片生成提示詞',
+                categoryId: 'cat-3',
+                content: `生成影片指令格式：
+
+主題：[影片主題]
+時長：[期望的影片長度]
+風格：[視覺風格]
+內容：[詳細內容描述]
+
+範例：
+主題：產品展示影片
+時長：15 秒
+風格：現代、簡約、專業
+內容：一支智慧型手機從黑色背景中旋轉出現，螢幕亮起展示介面，鏡頭特寫手機的細節，最後以品牌 logo 結束。整體採用深色調配合藍色科技光效，營造高端科技感。`,
+                notes: 'Veo 3.1 擅長生成結構化的內容，建議使用清晰的格式化指令。適合商業用途的短影片製作。',
+                tags: ['Gemini Veo 3.1', '影片生成', 'AI 影片', '商業影片'],
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            },
+            {
+                id: 'prompt-grok',
+                title: 'Grok - 影片生成提示詞',
+                categoryId: 'cat-3',
+                content: `影片生成提示：
+
+[用簡潔直接的語言描述你想要的影片內容]
+
+特點：
+- 強調動態元素和動作
+- 明確指出關鍵視覺效果
+- 說明情緒或氛圍
+
+範例 1：
+一隻貓咪在鍵盤上打字，牠認真的表情配上快速的爪子動作，周圍飄散著代碼符號的視覺效果，營造出「駭客貓」的幽默氛圍。
+
+範例 2：
+城市夜景的縮時攝影，車流如光河般流動，高樓大廈的燈光閃爍，鏡頭從地面升起至俯瞰整座城市，展現現代都市的繁華與活力。`,
+                notes: 'Grok 適合簡潔直接的描述風格。善用動作描述和視覺效果關鍵字可以獲得更生動的結果。',
+                tags: ['Grok', '影片生成', 'AI 影片', '創意影片'],
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            }
+        ];
+
+        this.prompts = defaultPrompts;
     }
 
     // 載入資料
