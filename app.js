@@ -59,6 +59,16 @@ class PromptManager {
 
 範例：
 一個寧靜的日出場景，鏡頭緩緩推進一座被晨霧籠罩的山頂。金色的陽光穿過雲層，照亮了山谷中的小村莊。鏡頭以電影般的流暢度環繞，展現出壯麗的全景。整體呈現溫暖、寧靜的氛圍，參考威斯·安德森的對稱構圖風格。`,
+                contentEn: `Create a high-quality video scene with the following elements:
+
+1. Scene Description: [Detailed description of environment, time, location]
+2. Subject Action: [Describe the main object or character's movement]
+3. Camera Movement: [e.g., dolly in, pull back, orbit, etc.]
+4. Lighting Atmosphere: [Describe lighting effects and overall mood]
+5. Style Reference: [Cinematic style, artistic style, etc.]
+
+Example:
+A serene sunrise scene, with the camera slowly pushing towards a mountain peak shrouded in morning mist. Golden sunlight breaks through the clouds, illuminating a small village in the valley below. The camera orbits with cinematic fluidity, revealing a breathtaking panoramic view. The overall atmosphere is warm and tranquil, referencing Wes Anderson's symmetrical composition style.`,
                 notes: '使用 Sora 2 時，越詳細的場景描述能獲得越好的效果。注意描述鏡頭運動和光線效果可以大幅提升影片質量。',
                 tags: ['Sora 2', '影片生成', 'AI 影片', '場景描述'],
                 createdAt: new Date().toISOString(),
@@ -80,6 +90,18 @@ class PromptManager {
 時長：15 秒
 風格：現代、簡約、專業
 內容：一支智慧型手機從黑色背景中旋轉出現，螢幕亮起展示介面，鏡頭特寫手機的細節，最後以品牌 logo 結束。整體採用深色調配合藍色科技光效，營造高端科技感。`,
+                contentEn: `Video Generation Command Format:
+
+Theme: [Video theme]
+Duration: [Desired video length]
+Style: [Visual style]
+Content: [Detailed content description]
+
+Example:
+Theme: Product showcase video
+Duration: 15 seconds
+Style: Modern, minimalist, professional
+Content: A smartphone rotates into view from a black background, screen lights up displaying the interface, camera focuses on phone details, ending with brand logo. Dark tones combined with blue tech lighting effects create a premium tech aesthetic.`,
                 notes: 'Veo 3.1 擅長生成結構化的內容，建議使用清晰的格式化指令。適合商業用途的短影片製作。',
                 tags: ['Gemini Veo 3.1', '影片生成', 'AI 影片', '商業影片'],
                 createdAt: new Date().toISOString(),
@@ -103,6 +125,20 @@ class PromptManager {
 
 範例 2：
 城市夜景的縮時攝影，車流如光河般流動，高樓大廈的燈光閃爍，鏡頭從地面升起至俯瞰整座城市，展現現代都市的繁華與活力。`,
+                contentEn: `Video Generation Prompt:
+
+[Describe your desired video content in clear, direct language]
+
+Key Points:
+- Emphasize dynamic elements and actions
+- Specify key visual effects
+- Define emotion or atmosphere
+
+Example 1:
+A cat typing on a keyboard, its focused expression paired with rapid paw movements, code symbols floating around creating a "hacker cat" humorous atmosphere.
+
+Example 2:
+City nightscape time-lapse, traffic flowing like rivers of light, skyscrapers' lights twinkling, camera rising from ground level to overhead view, showcasing the vibrant energy of modern urban life.`,
                 notes: 'Grok 適合簡潔直接的描述風格。善用動作描述和視覺效果關鍵字可以獲得更生動的結果。',
                 tags: ['Grok', '影片生成', 'AI 影片', '創意影片'],
                 createdAt: new Date().toISOString(),
@@ -169,6 +205,16 @@ class PromptManager {
 
 範例：
 一個寧靜的日出場景，鏡頭緩緩推進一座被晨霧籠罩的山頂。金色的陽光穿過雲層，照亮了山谷中的小村莊。鏡頭以電影般的流暢度環繞，展現出壯麗的全景。整體呈現溫暖、寧靜的氛圍，參考威斯·安德森的對稱構圖風格。`,
+                        contentEn: `Create a high-quality video scene with the following elements:
+
+1. Scene Description: [Detailed description of environment, time, location]
+2. Subject Action: [Describe the main object or character's movement]
+3. Camera Movement: [e.g., dolly in, pull back, orbit, etc.]
+4. Lighting Atmosphere: [Describe lighting effects and overall mood]
+5. Style Reference: [Cinematic style, artistic style, etc.]
+
+Example:
+A serene sunrise scene, with the camera slowly pushing towards a mountain peak shrouded in morning mist. Golden sunlight breaks through the clouds, illuminating a small village in the valley below. The camera orbits with cinematic fluidity, revealing a breathtaking panoramic view. The overall atmosphere is warm and tranquil, referencing Wes Anderson's symmetrical composition style.`,
                         notes: '使用 Sora 2 時，越詳細的場景描述能獲得越好的效果。注意描述鏡頭運動和光線效果可以大幅提升影片質量。',
                         tags: ['Sora 2', '影片生成', 'AI 影片', '場景描述'],
                         createdAt: new Date().toISOString(),
@@ -190,6 +236,18 @@ class PromptManager {
 時長：15 秒
 風格：現代、簡約、專業
 內容：一支智慧型手機從黑色背景中旋轉出現，螢幕亮起展示介面，鏡頭特寫手機的細節，最後以品牌 logo 結束。整體採用深色調配合藍色科技光效，營造高端科技感。`,
+                        contentEn: `Video Generation Command Format:
+
+Theme: [Video theme]
+Duration: [Desired video length]
+Style: [Visual style]
+Content: [Detailed content description]
+
+Example:
+Theme: Product showcase video
+Duration: 15 seconds
+Style: Modern, minimalist, professional
+Content: A smartphone rotates into view from a black background, screen lights up displaying the interface, camera focuses on phone details, ending with brand logo. Dark tones combined with blue tech lighting effects create a premium tech aesthetic.`,
                         notes: 'Veo 3.1 擅長生成結構化的內容，建議使用清晰的格式化指令。適合商業用途的短影片製作。',
                         tags: ['Gemini Veo 3.1', '影片生成', 'AI 影片', '商業影片'],
                         createdAt: new Date().toISOString(),
@@ -213,6 +271,20 @@ class PromptManager {
 
 範例 2：
 城市夜景的縮時攝影，車流如光河般流動，高樓大廈的燈光閃爍，鏡頭從地面升起至俯瞰整座城市，展現現代都市的繁華與活力。`,
+                        contentEn: `Video Generation Prompt:
+
+[Describe your desired video content in clear, direct language]
+
+Key Points:
+- Emphasize dynamic elements and actions
+- Specify key visual effects
+- Define emotion or atmosphere
+
+Example 1:
+A cat typing on a keyboard, its focused expression paired with rapid paw movements, code symbols floating around creating a "hacker cat" humorous atmosphere.
+
+Example 2:
+City nightscape time-lapse, traffic flowing like rivers of light, skyscrapers' lights twinkling, camera rising from ground level to overhead view, showcasing the vibrant energy of modern urban life.`,
                         notes: 'Grok 適合簡潔直接的描述風格。善用動作描述和視覺效果關鍵字可以獲得更生動的結果。',
                         tags: ['Grok', '影片生成', 'AI 影片', '創意影片'],
                         createdAt: new Date().toISOString(),
@@ -294,6 +366,10 @@ class PromptManager {
         // 字數統計
         document.getElementById('promptContent').addEventListener('input', (e) => {
             document.getElementById('charCount').textContent = e.target.value.length;
+        });
+
+        document.getElementById('promptContentEn').addEventListener('input', (e) => {
+            document.getElementById('charCountEn').textContent = e.target.value.length;
         });
 
         // 點擊 Modal 外部關閉
@@ -399,6 +475,9 @@ class PromptManager {
             const categoryName = category ? category.name : '未分類';
             const categoryIcon = category ? category.icon : '📝';
 
+            // 判斷是否有英文版本
+            const hasEnglish = prompt.contentEn && prompt.contentEn.trim() !== '';
+
             html += `
                 <div class="prompt-card" data-id="${prompt.id}">
                     <div class="prompt-header">
@@ -407,11 +486,24 @@ class PromptManager {
                             <div class="prompt-meta">
                                 <span>${categoryIcon} ${categoryName}</span>
                                 <span>📅 ${this.formatDate(prompt.createdAt)}</span>
-                                <span>📊 ${prompt.content.length} 字</span>
+                                <span>📊 中文 ${prompt.content.length} 字${hasEnglish ? ` / EN ${prompt.contentEn.length} chars` : ''}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="prompt-content">${this.escapeHtml(prompt.content)}</div>
+                    ${hasEnglish ? `
+                        <div class="bilingual-content">
+                            <div class="content-section">
+                                <div class="content-label">🇨🇳 中文版本</div>
+                                <div class="content-text">${this.escapeHtml(prompt.content)}</div>
+                            </div>
+                            <div class="content-section">
+                                <div class="content-label">🇬🇧 English Version</div>
+                                <div class="content-text">${this.escapeHtml(prompt.contentEn)}</div>
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="prompt-content">${this.escapeHtml(prompt.content)}</div>
+                    `}
                     ${prompt.notes ? `<div class="prompt-notes">💡 ${this.escapeHtml(prompt.notes)}</div>` : ''}
                     ${prompt.tags.length > 0 ? `
                         <div class="prompt-tags">
@@ -419,7 +511,8 @@ class PromptManager {
                         </div>
                     ` : ''}
                     <div class="prompt-actions">
-                        <button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}')">📋 複製</button>
+                        <button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}', 'zh')">📋 複製中文</button>
+                        ${hasEnglish ? `<button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}', 'en')">📋 複製英文</button>` : ''}
                         <button class="btn-small" onclick="promptManager.editPrompt('${prompt.id}')">✏️ 編輯</button>
                         <button class="btn-small" onclick="promptManager.confirmDeletePrompt('${prompt.id}')">🗑️ 刪除</button>
                     </div>
@@ -467,6 +560,9 @@ class PromptManager {
             const categoryName = category ? category.name : '未分類';
             const categoryIcon = category ? category.icon : '📝';
 
+            // 判斷是否有英文版本
+            const hasEnglish = prompt.contentEn && prompt.contentEn.trim() !== '';
+
             html += `
                 <div class="prompt-card" data-id="${prompt.id}">
                     <div class="prompt-header">
@@ -475,11 +571,24 @@ class PromptManager {
                             <div class="prompt-meta">
                                 <span>${categoryIcon} ${categoryName}</span>
                                 <span>📅 ${this.formatDate(prompt.createdAt)}</span>
-                                <span>📊 ${prompt.content.length} 字</span>
+                                <span>📊 中文 ${prompt.content.length} 字${hasEnglish ? ` / EN ${prompt.contentEn.length} chars` : ''}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="prompt-content">${this.escapeHtml(prompt.content)}</div>
+                    ${hasEnglish ? `
+                        <div class="bilingual-content">
+                            <div class="content-section">
+                                <div class="content-label">🇨🇳 中文版本</div>
+                                <div class="content-text">${this.escapeHtml(prompt.content)}</div>
+                            </div>
+                            <div class="content-section">
+                                <div class="content-label">🇬🇧 English Version</div>
+                                <div class="content-text">${this.escapeHtml(prompt.contentEn)}</div>
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="prompt-content">${this.escapeHtml(prompt.content)}</div>
+                    `}
                     ${prompt.notes ? `<div class="prompt-notes">💡 ${this.escapeHtml(prompt.notes)}</div>` : ''}
                     ${prompt.tags.length > 0 ? `
                         <div class="prompt-tags">
@@ -487,7 +596,8 @@ class PromptManager {
                         </div>
                     ` : ''}
                     <div class="prompt-actions">
-                        <button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}')">📋 複製</button>
+                        <button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}', 'zh')">📋 複製中文</button>
+                        ${hasEnglish ? `<button class="btn-small copy" onclick="promptManager.copyPrompt('${prompt.id}', 'en')">📋 複製英文</button>` : ''}
                         <button class="btn-small" onclick="promptManager.editPrompt('${prompt.id}')">✏️ 編輯</button>
                         <button class="btn-small" onclick="promptManager.confirmDeletePrompt('${prompt.id}')">🗑️ 刪除</button>
                     </div>
@@ -524,14 +634,17 @@ class PromptManager {
             document.getElementById('promptTitle').value = prompt.title;
             document.getElementById('promptCategory').value = prompt.categoryId;
             document.getElementById('promptContent').value = prompt.content;
+            document.getElementById('promptContentEn').value = prompt.contentEn || '';
             document.getElementById('promptNotes').value = prompt.notes;
             document.getElementById('promptTags').value = prompt.tags.join(', ');
             document.getElementById('charCount').textContent = prompt.content.length;
+            document.getElementById('charCountEn').textContent = (prompt.contentEn || '').length;
         } else {
             // 新增模式
             modalTitle.textContent = '新增提示詞';
             form.reset();
             document.getElementById('charCount').textContent = '0';
+            document.getElementById('charCountEn').textContent = '0';
 
             // 如果選擇了特定分類，預設選擇該分類
             if (this.currentCategory !== 'all') {
@@ -554,6 +667,7 @@ class PromptManager {
         const title = document.getElementById('promptTitle').value.trim();
         const categoryId = document.getElementById('promptCategory').value;
         const content = document.getElementById('promptContent').value.trim();
+        const contentEn = document.getElementById('promptContentEn').value.trim();
         const notes = document.getElementById('promptNotes').value.trim();
         const tagsInput = document.getElementById('promptTags').value.trim();
         const tags = tagsInput ? tagsInput.split(',').map(t => t.trim()).filter(t => t) : [];
@@ -564,6 +678,7 @@ class PromptManager {
             prompt.title = title;
             prompt.categoryId = categoryId;
             prompt.content = content;
+            prompt.contentEn = contentEn;
             prompt.notes = notes;
             prompt.tags = tags;
             prompt.updatedAt = new Date().toISOString();
@@ -576,6 +691,7 @@ class PromptManager {
                 title,
                 categoryId,
                 content,
+                contentEn,
                 notes,
                 tags,
                 createdAt: new Date().toISOString(),
@@ -614,16 +730,18 @@ class PromptManager {
     }
 
     // 複製提示詞
-    async copyPrompt(promptId) {
+    async copyPrompt(promptId, lang = 'zh') {
         const prompt = this.prompts.find(p => p.id === promptId);
+        const textToCopy = lang === 'en' ? (prompt.contentEn || prompt.content) : prompt.content;
+        const langLabel = lang === 'en' ? '英文' : '中文';
 
         try {
-            await navigator.clipboard.writeText(prompt.content);
-            this.showToast('📋 已複製到剪貼簿');
+            await navigator.clipboard.writeText(textToCopy);
+            this.showToast(`📋 已複製${langLabel}版本到剪貼簿`);
         } catch (err) {
             // 舊版瀏覽器回退方案
             const textArea = document.createElement('textarea');
-            textArea.value = prompt.content;
+            textArea.value = textToCopy;
             textArea.style.position = 'fixed';
             textArea.style.left = '-999999px';
             document.body.appendChild(textArea);
@@ -631,7 +749,7 @@ class PromptManager {
 
             try {
                 document.execCommand('copy');
-                this.showToast('📋 已複製到剪貼簿');
+                this.showToast(`📋 已複製${langLabel}版本到剪貼簿`);
             } catch (err) {
                 this.showToast('❌ 複製失敗');
             }

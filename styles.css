@@ -249,6 +249,57 @@ header h1 {
     overflow-y: auto;
 }
 
+/* 雙語內容顯示 */
+.bilingual-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.content-section {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.content-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.content-label::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.content-text {
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+@media (max-width: 968px) {
+    .bilingual-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 .prompt-notes {
     background: #fffbeb;
     border-left: 3px solid #f59e0b;
@@ -454,6 +505,31 @@ header h1 {
     margin-bottom: 8px;
     font-weight: 500;
     color: var(--text-color);
+}
+
+.label-hint {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+/* 雙語輸入容器 */
+.bilingual-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.bilingual-field {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .bilingual-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form-group input,

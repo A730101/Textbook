@@ -74,11 +74,28 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="promptContent">提示詞內容 *</label>
-                        <textarea id="promptContent" rows="8" required placeholder="輸入你的提示詞內容..."></textarea>
-                        <div class="char-count">
-                            字數: <span id="charCount">0</span>
+                    <!-- 雙語輸入區域 -->
+                    <div class="bilingual-container">
+                        <div class="form-group bilingual-field">
+                            <label for="promptContent">
+                                中文提示詞 *
+                                <span class="label-hint">主要內容</span>
+                            </label>
+                            <textarea id="promptContent" rows="10" required placeholder="輸入中文提示詞內容..."></textarea>
+                            <div class="char-count">
+                                字數: <span id="charCount">0</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group bilingual-field">
+                            <label for="promptContentEn">
+                                English Prompt
+                                <span class="label-hint">英文版本（選填）</span>
+                            </label>
+                            <textarea id="promptContentEn" rows="10" placeholder="Enter English prompt content..."></textarea>
+                            <div class="char-count">
+                                字數: <span id="charCountEn">0</span>
+                            </div>
                         </div>
                     </div>
 
